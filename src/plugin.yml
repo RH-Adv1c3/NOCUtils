@@ -1,0 +1,19 @@
+name: NOCUtils
+version: 1.6.4
+main: gg.noc.TekkitUtils.Main
+author: DezeGames
+description: Multiple utility commands and features to ease tekkit workflow
+
+commands:
+  rtp:
+    description: The command for the random TP
+    aliases: [tprandom, wild, randomtp, tothemoonandback]
+  shrug:
+    description: Sends a shrug in chat
+    aliases: [shr]
+  tableflip:
+    description: Sends a table flip in chat
+    aliases: [tblf]
+  unflip:
+    description: Sends a table UNflip in chat
+    aliases: [utblf]

@@ -1,0 +1,10 @@
+enable-signs: true
+enable-console-debug: true
+enable-console-logs: true
+
+rtp-maxX: 2000
+rtp-maxZ: 2000
+s1: '&5[RTP]'
+s2: '&0Right click'
+s3: '&0sign for'
+s4: '&0random TP'
