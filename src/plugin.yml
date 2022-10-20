@@ -1,6 +1,6 @@
 name: NOCUtils
 version: 1.6.4
-main: gg.noc.TekkitUtils.Main
+main: gg.noc.nocutils.Main
 author: DezeGames
 description: Multiple utility commands and features to ease tekkit workflow
 

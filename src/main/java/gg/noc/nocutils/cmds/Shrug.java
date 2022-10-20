@@ -1,13 +1,4 @@
-/*
- * Decompiled with CFR 0.150.
- * 
- * Could not load the following classes:
- *  org.bukkit.command.Command
- *  org.bukkit.command.CommandSender
- *  org.bukkit.entity.Player
- *  org.bukkit.plugin.java.JavaPlugin
- */
-package gg.noc.TekkitUtils.cmds;
+package gg.noc.nocutils.cmds;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;

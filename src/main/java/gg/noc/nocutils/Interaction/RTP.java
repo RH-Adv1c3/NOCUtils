@@ -1,4 +1,4 @@
-package gg.noc.TekkitUtils.Interaction;
+package gg.noc.nocutils.Interaction;
 
 import org.bukkit.ChatColor;
 import org.bukkit.Location;

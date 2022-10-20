@@ -1,9 +1,9 @@
-package gg.noc.TekkitUtils;
+package gg.noc.nocutils;
 
-import gg.noc.TekkitUtils.Interaction.RTP;
-import gg.noc.TekkitUtils.cmds.Shrug;
-import gg.noc.TekkitUtils.cmds.TableFlip;
-import gg.noc.TekkitUtils.cmds.UnFlip;
+import gg.noc.nocutils.Interaction.RTP;
+import gg.noc.nocutils.cmds.Shrug;
+import gg.noc.nocutils.cmds.TableFlip;
+import gg.noc.nocutils.cmds.UnFlip;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;

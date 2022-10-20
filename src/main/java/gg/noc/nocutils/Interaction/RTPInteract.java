@@ -1,5 +1,6 @@
-package gg.noc.TekkitUtils.Interaction;
+package gg.noc.nocutils.Interaction;
 
+import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -25,6 +26,9 @@ public class RTPInteract extends JavaPlugin {
                 e.setLine(2, ChatColor.translateAlternateColorCodes('&', config.getString("s3")));
                 e.setLine(3, ChatColor.translateAlternateColorCodes('&', config.getString("s4")));
             }
+        } else {
+            e.setCancelled(true);
+            Bukkit.getLogger().warning("Player by the name of (" + e.getPlayer().getName() + ") tried to place a RTP sign without permission");
         }
     }
 
@@ -34,16 +38,21 @@ public class RTPInteract extends JavaPlugin {
         if (e.getClickedBlock().getState() instanceof Sign) {
             Sign s = (Sign) e.getClickedBlock().getState();
             if(s.getLine(0).equalsIgnoreCase(ChatColor.translateAlternateColorCodes('&', getConfig().getString("s1")))) {
-                Random random = new Random();
-                Player player = e.getPlayer();
-                int x = random.nextInt(getConfig().getInt("rtp-maxX"));
-                int y = 0;
-                int z = random.nextInt(getConfig().getInt("rtp-maxZ"));
-                Location location = new Location(player.getWorld(),x, y, z);
-                y = player.getWorld().getHighestBlockYAt(location);
-                location.setY(y);
-                player.teleport(location);
-                player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("scsmes")));
+                if(e.getPlayer().hasPermission("gg.nocutils.usertpsign")) {
+                    Random random = new Random();
+                    Player player = e.getPlayer();
+                    int x = random.nextInt(getConfig().getInt("rtp-maxX"));
+                    int y = 0;
+                    int z = random.nextInt(getConfig().getInt("rtp-maxZ"));
+                    Location location = new Location(player.getWorld(),x, y, z);
+                    y = player.getWorld().getHighestBlockYAt(location);
+                    location.setY(y);
+                    player.teleport(location);
+                    player.sendMessage(ChatColor.translateAlternateColorCodes('&', getConfig().getString("scsmes")));
+                } else {
+                    e.setCancelled(true);
+                    Bukkit.getLogger().warning("Player by the name of (" + e.getPlayer().getName() + ") tried to use a RTP sign without permission");
+                }
             }
         }
     }
