@@ -1,9 +1,10 @@
 # NOCUtils
-NOC Minecraft Network Util Plugin for 1.6.4
+NOC Minecraft Network Util Plugin for 1.6.4d
 
-Copied over from our older Tekkit Utils Plugin which we made for our patched tekkit 1.2.9g
+Copied over from our older Tekkit Utils Plugin which we made for our patched Tekkit 1.2.9g
+This is a very simple plugin and mainly made for our build.
 
-Commands: 
+Commands:
 - /tableflip
 - /unflip
 - /shrug
@@ -18,3 +19,5 @@ Permissions:
 * gg.nocutils.placetpsign
 * gg.nocutils.usertpsign
 * gg.nocutils.rtpcommand
+
+This plugin is as is, no responsibility will be on me for the effects of this plugin.
